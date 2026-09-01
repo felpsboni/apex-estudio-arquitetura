@@ -1,0 +1,6 @@
+{
+  "name": "Apex Studio | Arquitetura & Interiores",
+  "description": "Estúdio de arquitetura autoral e interiores em São Paulo. Projetos residenciais e comerciais que unem rigor construtivo, matéria e atmosfera.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

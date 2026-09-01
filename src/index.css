@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Architectural Palette - Deep Atmospheric Purples, Mineral Quartz, & Natural Stone */
+    --background: 270 20% 6%;         /* #0F0C14 Deep stone graphite */
+    --foreground: 40 20% 95%;         /* #F6F4F0 Warm architectural ivory */
+    
+    --surface: 270 18% 10%;           /* #191421 Deep structured plane */
+    --surface-elevated: 270 16% 14%;  /* #251E31 Elevated slab */
+    --surface-glass: 270 20% 8% / 0.85;
+
+    /* Base Brand Colors: Deep Purple (#6B21A8) & Quartz Pink (#F472B6) */
+    --primary: 271 76% 39%;           /* #6B21A8 Deep Imperial Purple */
+    --primary-foreground: 40 20% 98%; /* High contrast ivory */
+    --primary-glow: 271 76% 45%;
+
+    --secondary: 330 81% 70%;         /* #F472B6 Quartz Rose */
+    --secondary-foreground: 270 30% 8%; /* Contrast dark */
+    --secondary-muted: 330 40% 55%;
+
+    --muted: 270 12% 18%;             /* Subdued mineral plane */
+    --muted-foreground: 270 10% 70%;  /* #B8B0C5 Legible muted silver/stone */
+
+    --accent: 330 81% 70%;            /* Quartz accent */
+    --accent-foreground: 270 30% 8%;
+
+    --border: 270 15% 20%;            /* Hairline structural border */
+    --border-subtle: 270 15% 14%;
+    --border-accent: 330 60% 65% / 0.3;
+
+    --ring: 330 81% 70%;
+
+    --shadow-soft: 0 4px 20px -2px rgba(10, 8, 16, 0.5);
+    --shadow-elevated: 0 12px 36px -4px rgba(10, 8, 16, 0.7), 0 0 20px -2px rgba(107, 33, 168, 0.15);
+
+    --gradient-editorial: linear-gradient(135deg, rgba(107, 33, 168, 0.25) 0%, rgba(244, 114, 182, 0.08) 50%, rgba(15, 12, 20, 0) 100%);
+    --gradient-dark: linear-gradient(180deg, rgba(15, 12, 20, 0.3) 0%, rgba(15, 12, 20, 0.95) 100%);
+
+    --radius: 0.25rem; /* Precise architectural minimal radius */
+
+    /* Typography */
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+    --font-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-surface: hsl(var(--surface));
+  --color-surface-elevated: hsl(var(--surface-elevated));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-glow: hsl(var(--primary-glow));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  
+  --color-quartz: hsl(330 81% 70%);
+  --color-quartz-light: hsl(330 90% 85%);
+  --color-quartz-dark: hsl(330 60% 45%);
+  
+  --color-purple-deep: hsl(271 76% 39%);
+  --color-purple-dark: hsl(270 65% 16%);
+  --color-purple-subtle: hsl(270 30% 12%);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-border-subtle: hsl(var(--border-subtle));
+  --color-border-accent: hsl(var(--border-accent));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+}
+
+/* Editorial Grain Overlay */
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar for Luxury Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(270 20% 6%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(270 15% 25%);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(330 60% 60%);
+}
+
+/* Hairline Grid & Rule Lines */
+.hairline-border {
+  border-width: 1px;
+  border-color: hsl(var(--border));
+}
+
+.hairline-top {
+  border-top-width: 1px;
+  border-color: hsl(var(--border));
+}
+
+.hairline-bottom {
+  border-bottom-width: 1px;
+  border-color: hsl(var(--border));
+}
+
+/* Focus Visible */
+*:focus-visible {
+  outline: 2px solid hsl(var(--secondary));
+  outline-offset: 2px;
+}
